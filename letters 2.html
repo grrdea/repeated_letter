@@ -2,7 +2,7 @@
 <html>
     <meta name="author" content="Gerard Guix">
     <meta name="viewport" content="width=device-width, user-scalable=no">
-    <title>JAVASCRIPT Exercicis Bàsics</title>
+    <title>JAVASCRIPT Lletres repetides</title>
 
 <head>
 <!--STYLES-->
@@ -40,8 +40,9 @@ a {
 
 <!--Scripts-->
 <script>
+    document.title = document.title + " / FASE 2";
     // FASE 2
-    var name = ["Gerard GUIX"];
+    var name = ["Gerard 1 GUIX"];
     var nameL = name.length;
     var upper = name.toUpperCase();
     var i;
@@ -49,8 +50,14 @@ a {
     for (i=0; i<nameL; i++) {
         var letter= upper[i];
         //console.log(letter);
-        if (letter=="A" || letter=="E" || letter=="I" || letter=="O" || letter=="U") {
+        if (letter=="0" || letter=="1" || letter=="2" || letter=="3" || letter=="4" || letter=="5" || letter=="6" || letter=="7" || letter=="8" || letter=="9") {
+            console.log("Els noms de persones no contenen el número: " + name[i]);  
+        }
+        else if (letter==" ") {
+        }
+        else if (letter=="A" || letter=="E" || letter=="I" || letter=="O" || letter=="U") {
             console.log("He trobat la VOCAL:" + name[i]);
+                    
         }
         else {
             console.log("He trobat la CONSONANT: " + name[i]);
