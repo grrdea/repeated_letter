@@ -1,74 +1,79 @@
 <!DOCTYPE html>
 <html>
-    <meta name="author" content="Gerard Guix">
-    <meta name="viewport" content="width=device-width, user-scalable=no">
-    <title>JAVASCRIPT Lletres repetides</title>
+<meta name="author" content="Gerard Guix">
+<meta name="viewport" content="width=device-width, user-scalable=no">
+<title>JAVASCRIPT Lletres repetides</title>
 
 <head>
-<!--STYLES-->
-<style>
-body {
-    font-family:Arial, Helvetica, sans-serif;
-    text-align: center;
-    color: white;
-    width: 80%;
-    margin: 0 auto;
-    background-color: orangered;
-}
-h2{
-    color: black;
-}
-.btn {
-    font-size: 1.5rem;
-    font-weight: bold;    
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
-    background-color:#31332F;
-    color: white;
-}
-a {
-    color: blue;
-}
+    <!--STYLES-->
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            color: white;
+            width: 80%;
+            margin: 0 auto;
+            background-color: rgb(255, 140, 0);
+        }
+        
+        h2 {
+            color: black;
+        }
+        
+        .btn {
+            font-size: 1.5rem;
+            font-weight: bold;
+            padding: 0.5rem 1rem;
+            font-size: 1rem;
+            background-color: #31332F;
+            color: white;
+        }
+        
+        a {
+            color: blue;
+        }
+        
+        .line {
+            background-color: #31332F;
+            height: 2px;
+            margin: 2rem 0;
+        }
+    </style>
 
-.line{
-    background-color:#31332F;
-    height: 2px;
-    margin: 2rem 0;
-}
-</style>
 
+    <!--Scripts-->
+    <script>
+        document.title = document.title + " / FASE 2";
 
-<!--Scripts-->
-<script>
-    document.title = document.title + " / FASE 2";
-    // FASE 2
-    var name = ["Gerard 1 GUIX"];
-    var nameL = name.length;
-    var upper = name.toUpperCase();
-    var i;
-    console.log("Partim del nom " + name);
-    for (i=0; i<nameL; i++) {
-        var letter= upper[i];
-        //console.log(letter);
-        if (letter=="0" || letter=="1" || letter=="2" || letter=="3" || letter=="4" || letter=="5" || letter=="6" || letter=="7" || letter=="8" || letter=="9") {
-            console.log("Els noms de persones no contenen el número: " + name[i]);  
+        // FASE 3
+        var firstName = ["G", "e", "r", "a", "r", "d", 9];
+        console.log(typeof firstName);
+        console.log(firstName);
+        var nameLength = firstName.length;
+        var i;
+        console.log("Partim del nom " + firstName.join(""));
+        for (i = 0; i < nameLength; i++) {
+            let nameUpper = firstName.join("").toUpperCase();
+            //console.log(nameUpper);
+            if (typeof firstName[i] === "number") {
+                console.log("Ups! Els noms de persones no contenen el número: " + firstName[i]);
+            } else if (nameUpper[i] == " ") {} else if (nameUpper[i] == "A" || nameUpper[i] == "E" || nameUpper[i] == "I" || nameUpper[i] == "O" || nameUpper[i] == "U") {
+                console.log("Dona'm la VOCAL:" + firstName[i]);
+
+            } else {
+                console.log("Dona'm la CONSONANT: " + firstName[i]);
+            }
         }
-        else if (letter==" ") {
-        }
-        else if (letter=="A" || letter=="E" || letter=="I" || letter=="O" || letter=="U") {
-            console.log("He trobat la VOCAL:" + name[i]);
-                    
-        }
-        else {
-            console.log("He trobat la CONSONANT: " + name[i]);
-        }
-    }
-</script>
+
+        //document.getElementById("fase").innerHTML = document.title;
+    </script>
 
 </head>
+
 <body>
-    <h2>JavaScript Repeated Letters</h2>
-    <h1>My name is GERARD GUIX LLORENS</h1>
+    <h2>JS Repeated Letters</h2>
+    <h1>Decomposing and defining my name with a number</h1>
     <p>Check out console!</p>
 </body>
+
 </html>
