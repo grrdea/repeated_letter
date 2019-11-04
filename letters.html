@@ -13,7 +13,7 @@ body {
     color: white;
     width: 80%;
     margin: 0 auto;
-    background-color: orangered;
+    background-color: rgb(255, 217, 0);
 }
 h2{
     color: black;
@@ -42,18 +42,20 @@ a {
 <script>
     document.title = document.title + " / FASE 1";
     // FASE 1
-    var name = ["GERARD"];
-    var nameL = name.length;
+    var firstName = ["G","E","R","A","R","D"];
+    console.log(typeof firstName);
+    console.log(firstName);
+    var nameLength = firstName.length;
     var i;
-    for (i=0; i<nameL; i++) {
-        console.log(name[i]);
+    for (i=0; i<nameLength; i++) {
+        console.log(firstName[i]);
     }
 </script>
 
 </head>
 <body>
-    <h2>JavaScript Repeated Letters</h2>
-    <h1>My name is GERARD GUIX LLORENS</h1>
+    <h2>JS Repeated Letters</h2>
+    <h1>Decomposing my name</h1>
     <p>Check out console!</p>
 </body>
 </html>
