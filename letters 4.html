@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<meta name="author" content="Gerard Guix">
+<meta name="viewport" content="width=device-width, user-scalable=no">
+<title>JAVASCRIPT Lletres repetides</title>
+
+<head>
+    <!--STYLES-->
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            color: white;
+            width: 80%;
+            margin: 0 auto;
+            background-color: red;
+        }
+        
+        h2 {
+            color: black;
+        }
+        
+        .btn {
+            font-size: 1.5rem;
+            font-weight: bold;
+            padding: 0.5rem 1rem;
+            font-size: 1rem;
+            background-color: #31332F;
+            color: white;
+        }
+        
+        a {
+            color: blue;
+        }
+        
+        .line {
+            background-color: #31332F;
+            height: 2px;
+            margin: 2rem 0;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>JS Repeated Letters <span id="fase"></span></h2>
+    <h1>Concat my FULL name</h1>
+    <p>Check out console!</p>
+
+    <!--Scripts-->
+    <script>
+        document.title = document.title + " / FASE 3";
+
+        // FASE 3
+        var myName = ["G", "e", "r", "a", "r", "d"];
+        myName.push(" ");
+        var lastName = ["G", "u", "i", "x"];
+        var fullName = myName.concat(lastName);
+
+        console.log(fullName);
+    </script>
+
+</body>
+
+</html>
