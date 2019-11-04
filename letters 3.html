@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<meta name="author" content="Gerard Guix">
+<meta name="viewport" content="width=device-width, user-scalable=no">
+<title>JAVASCRIPT Lletres repetides</title>
+
+<head>
+    <!--STYLES-->
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            color: white;
+            width: 80%;
+            margin: 0 auto;
+            background-color: orangered;
+        }
+        
+        h2 {
+            color: black;
+        }
+        
+        .btn {
+            font-size: 1.5rem;
+            font-weight: bold;
+            padding: 0.5rem 1rem;
+            font-size: 1rem;
+            background-color: #31332F;
+            color: white;
+        }
+        
+        a {
+            color: blue;
+        }
+        
+        .line {
+            background-color: #31332F;
+            height: 2px;
+            margin: 2rem 0;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>JS Repeated Letters <span id="fase"></span></h2>
+    <h1>Decomposing, defining and counting letters (in my name)</h1>
+    <p>Check out console!</p>
+
+    <!--Scripts-->
+    <script>
+        document.title = document.title + " / FASE 3";
+
+        // FASE 3
+        var fullName = ["G", "e", "r", "a", "r", "d", " ", "g", "u", "i", "x", " "];
+        console.log("Partim del nom " + fullName.join(""));
+
+        fullName = fullName.map(toUpper);
+        fullName.sort();
+        console.log(fullName);
+
+        function toUpper(x) {
+            return x.toUpperCase();
+        }
+
+        var counts = {};
+        fullName.forEach(function(a) {
+            counts[a] = (counts[a] || 0) + 1;
+        });
+        console.log(counts);
+    </script>
+
+</body>
+
+</html>
